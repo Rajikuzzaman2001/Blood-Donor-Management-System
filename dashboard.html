@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Blood Donor Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <h1>🩸 Blood Donor Management System</h1>
+    <p>Dashboard</p>
+
+</header>
+
+<div class="container">
+
+    <button onclick="window.location.href='register.html'">
+        ➕ Register New Donor
+    </button>
+
+    <button onclick="logout()">
+        🚪 Logout
+    </button>
+
+</div>
+
+<div class="container">
+
+    <h2>Total Donors</h2>
+
+    <div class="counter">
+
+        Total Donors :
+        <span id="totalDonors">0</span>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <h2>Search Donor</h2>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchBlood"
+            placeholder="Search by Blood Group (Example: A+)"
+        >
+
+        <button onclick="searchDonor()">
+            Search
+        </button>
+
+    </div>
+
+</div>
+
+<div class="container">
+
+    <h2>Donor List</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Name</th>
+                <th>Age</th>
+                <th>Blood</th>
+                <th>Phone</th>
+                <th>District</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="donorList">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>
